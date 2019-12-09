@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  accident_id: 1
+  date_of_report: 2019-12-08
+  time_of_report: 2019-12-08 18:30:49
+  contractor_name: MyString
+  vehicle_used: MyString
+  location: MyString
+  pre_damage_pic: MyString
+  post_damage_pic: MyString
+  employee_description: MyString
+
+two:
+  user_id: 1
+  accident_id: 1
+  date_of_report: 2019-12-08
+  time_of_report: 2019-12-08 18:30:49
+  contractor_name: MyString
+  vehicle_used: MyString
+  location: MyString
+  pre_damage_pic: MyString
+  post_damage_pic: MyString
+  employee_description: MyString

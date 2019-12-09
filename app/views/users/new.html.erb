@@ -1,0 +1,23 @@
+<!-- Side navigation -->
+<div class="sidenav">
+    <h1>New User</h1>
+
+    <ul> <p><form action="/login" method="get">
+      <input type="submit" value="Already have an account" 
+           name="Submit" id="frm1_submit" />
+  </form></p> <br /></ul>
+       
+  </div>
+  
+  <!-- Page content -->
+  <div class="main">
+                
+      <%= form_for :user, url: '/users' do |f| %>
+      Employee_id: <%= f.text_field :employee_id %> <br /> <br>
+      Password: <%= f.password_field :password %> <br /><br>
+      Password Confirmation: <%= f.password_field :password_confirmation %> <br /><br>
+      <%= f.submit "Submit" %>
+    <% end %> <br /><br>
+        
+
+</div>
