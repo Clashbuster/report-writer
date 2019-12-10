@@ -1,0 +1,30 @@
+<h1>Report</h1>
+
+<%= link_to 'Home', landing_path %>
+
+<ul>
+
+<li> <strong>  Written by :</strong> <%= @report.user.employee_id %></li>
+<li>  <strong>    Time of accident : </strong><%= @report.accident.datetime_of_accident %></li>
+<li>  <strong>    Written on :</strong> <%= @report.datetime_of_report %></li>
+<li>  <strong>    Vehicle used : </strong><%= @report.vehicle_used %></li>
+<li>  <strong>    Contractor name : </strong><%= @report.contractor_name %></li>
+<li>  <strong>    Location : </strong><%= @report.location %></li>
+<li>  <strong>    Employee description : </strong><%= @report.employee_description %></li>
+<li>  <strong>    Utility line : </strong><%= @report.utility_line%></li>
+
+</ul>
+
+<h2>Before Damage </h2>
+<ul>
+<%@report.pre_damage_pictures.each do |p| %>
+<%= image_tag p, :size => "400x400" %>
+<% end %>
+</ul>
+
+<h2> After Damage </h2>
+<ul>
+<%@report.post_damage_pictures.each do |p| %>
+<%= image_tag p, :size => "400x400" %>
+<% end %>
+</ul>

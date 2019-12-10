@@ -1,3 +1,9 @@
+<h1>All Reports</h1>
+
+<%= link_to 'Home', landing_path %>
+
+<ul>
 <% @reports.each do |u| %>
-<%= u.employee_id %>
+<li><%= link_to u.datetime_of_report, report_path(u)%></li>
 <% end %>
+</ul>

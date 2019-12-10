@@ -1,1 +1,18 @@
-<h1>hello</h1>
+    <h1>File new report</h1>
+
+    <%= link_to 'Home', landing_path %>
+
+    <%= form_for @report do |f| %>
+        <ul>   Employee_id : <%= f.text_field :user_id %> </ul>
+        <ul>   Date of report : <%= f.datetime_select :datetime_of_report %> </ul>
+        <ul>   Contractor : <%= f.text_field :contractor_name %> </ul>
+        <ul>   Vehicle : <%= f.text_field :vehicle_used %> </ul>
+        <ul>  Location : <%= f.text_field :location %> </ul>
+        <ul>  Employee Description : <%= f.text_area :employee_description %> </ul>
+        <ul>   Utility line : <%= f.text_field :utility_line %> </ul>
+        <ul>      Pre_Damage_pictures : <%= f.file_field :pre_damage_pictures, multiple: true %> </ul>
+        <ul>     Post_Damage_pictures : <%= f.file_field :post_damage_pictures, multiple: true %> </ul>
+        <ul> Date of Accident : <%= datetime_select :accident, :datetime_of_accident %></ul>
+        <ul> <%= f.submit "Submit" %></ul>
+    <% end %> <br /><br>
+    

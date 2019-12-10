@@ -1,0 +1,10 @@
+<h1>All Accidents</h1>
+
+<%= link_to 'Home', landing_path %>
+
+
+<ul>
+<% @accidents.each do |a| %>
+<li><%= a.datetime_of_accident %></li>
+<% end %>
+</ul>

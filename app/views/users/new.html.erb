@@ -12,7 +12,7 @@
   <!-- Page content -->
   <div class="main">
                 
-      <%= form_for :user, url: '/users' do |f| %>
+      <%= form_for @user  do |f| %>
       Employee_id: <%= f.text_field :employee_id %> <br /> <br>
       Password: <%= f.password_field :password %> <br /><br>
       Password Confirmation: <%= f.password_field :password_confirmation %> <br /><br>

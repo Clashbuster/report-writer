@@ -13,8 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_12_09_023709) do
 
   create_table "accidents", force: :cascade do |t|
-    t.time "time_of_accident"
-    t.date "date_of_accident"
+    t.datetime "datetime_of_accident"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -43,12 +42,12 @@ ActiveRecord::Schema.define(version: 2019_12_09_023709) do
   create_table "reports", force: :cascade do |t|
     t.integer "user_id"
     t.integer "accident_id"
-    t.date "date_of_report"
-    t.time "time_of_report"
+    t.datetime "datetime_of_report"
     t.string "contractor_name"
     t.string "vehicle_used"
     t.string "location"
     t.string "employee_description"
+    t.string "utility_line"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

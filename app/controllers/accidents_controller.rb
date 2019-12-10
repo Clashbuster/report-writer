@@ -12,9 +12,16 @@ class AccidentsController < ApplicationController
         @accident = Accident.find(params[:id])
     end
 
+    private
+
     def accident_params
-        params.require(:accident).permit(:user_id, :accident_id, :date_of_report, :time_of_report, :contractor_name, :vehicle_used, :location, :employee_description)
+        params.require(:accident).permit(:time_of_accident, :date_of_accident)
       end
+
+      def locate_account
+        # byebug
+        @account = Account.find(params[:id])
+    end
 
 
 end

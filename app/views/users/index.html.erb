@@ -1,3 +1,9 @@
+<h1>All Employees</h1>
+
+<%= link_to 'Home', landing_path %>
+
+<ul>
 <% @users.each do |u| %>
-<%= u.employee_id %>
+<li><%= u.employee_id %></li>
 <% end %>
+</ul>
